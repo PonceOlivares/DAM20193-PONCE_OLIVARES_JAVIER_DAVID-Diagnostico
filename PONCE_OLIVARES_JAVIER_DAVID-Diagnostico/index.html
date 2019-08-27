@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Examen de diagnostico D: </title>
+    <link rel="stylesheet" href="css/master.css">
+    <script type="text/javascript">
+    function validar()
+    {
+        var usuario = document.getElementById("usuario").value;
+        var contraseña = document.getElementById("pass").value;
+        if (usuario=="admin"&& contraseña =="admin") {
+            alert("usuario y contraseña validos");
+            window.location="funcion.html"; 
+        } else {
+            alert( "verificar datos");
+        }
+    }
+    </script>
+
+</head>
+<body>
+    <div class="login-box">
+        <h1> Login </h1>
+        <form>
+            <!-- PARA EL USUARIO-->
+            <label for="username">Usuario</label>
+            <input type="text" placeholder="Tu nombre de usuario" class="Input" value="" name="usuario" id="usuario">
+            
+            <!-- PARA LA CONTRASEÑA-->
+            <label for="password">Contraseña</label>
+            <input type="password" placeholder="*********" class="Input" value="" name="password" id="pass">
+            
+            <!-- BOTON DE LOGIN -->
+            <input type="button" name="btnVerifica" value="Entrar" id="btnVerifica" target="_parent" onclick="validar()"/>
+
+        </form>
+    </div>
+
+
+</body>
+</html>

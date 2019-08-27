@@ -1,0 +1,51 @@
+body{
+    margin: 10px;
+    padding: 0;
+    background: #034694;
+    
+}
+.login-box{
+    width: 320px;
+    height: 420px;
+    background: #ed1c24;
+    color: #dba111;
+    top: 50%;
+    left: 50%;
+   
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 50px 30px;
+    text-align: justify;
+    font-size: 20px;    
+}
+.login-box input{
+    margin: 10%;
+}
+.login-box input[type="button"]{
+    background: #034694;
+    outline: none;
+    width: 150px;
+   height: 40px;
+}
+.login-box input[type="button"]:hover{
+    background: #dba111;
+    font-style: oblique;
+    font-size: 120%;
+}
+
+.formatoTabla{
+    width: fit-content;
+    height: fit-content;
+    background: #ed1c24;
+    color: #dba111;
+    top: 0%;
+    left: 0%;
+    box-sizing: border-box;
+    text-align: center;
+    
+    border-width: 3px;
+    border-collapse: separate;
+    border-spacing: 1px;
+
+}

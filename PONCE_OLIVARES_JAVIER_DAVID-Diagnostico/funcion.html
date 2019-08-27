@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <link rel="stylesheet" href="css/master.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>generar tablas</title>
+
+    <script type="text/javascript">
+      
+            function crear(){
+                var col=2;
+			var filas=parseInt(document.getElementById("rows").value)+1;
+			var tabla="<table border = \"1\" class =\"numeros\" style=\"border-collapse:collapse; border-color:#000000; border: solid 3px #000000\">";
+			var suma='1';
+			var res=1;
+
+
+			for(i=0;i<filas;i++){ 
+				if(i==0)
+				{
+					tabla+="<tr class =\"titulo\" style=\"border-collapse:collapse; border-color:#000000; border: solid 3px #000000\" >";
+    		tabla+="<td> Número </td>";//numero
+    		tabla+="<td> Procedimiento </td>";//Procedimiento
+    		tabla+="<td> Resultado </td>";//Resultado
+    		tabla+="</tr>";
+    	}
+    	else
+    	{
+    		if(i==1)
+    		{
+    			tabla+="<tr>";
+        tabla+="<td>"+(i)+ "</td>";//numero
+        suma+='x'+(i);
+        tabla+="<td class=\"calculo\">"+suma+"</td>";//calculo
+        res=res*(i);
+        tabla+="<td class=\"resultado\">"+res+"</td>";//resultado
+        tabla+="</tr>";
+        suma='1';
+    }
+    else
+    {
+    	tabla+="<tr>";
+        tabla+="<td>"+(i)+ "</td>";//numero
+        suma+='x'+(i);
+        tabla+="<td class=\"calculo\">"+suma+"</td>";//calculo
+        res=res*(i);
+
+        tabla+="<td class=\"resultado\">"+res+"</td>";//resultado
+        
+        tabla+="</tr>";
+    }
+}
+}
+tabla+="</table>";
+document.getElementById("resultado").innerHTML=tabla;
+           
+            }
+            
+
+    </script>
+</head>
+<body>
+    <div class="NUEVO">
+        <form>
+            <label for="numero">Numero de filas</label>
+            <input type="number" id="rows">
+            <input type="button" value="Generar!" onclick="crear()" id="enviar">
+
+            
+        </form>
+        <br>
+        
+    </div>
+   
+    <div id="resultado" class="formatoTabla" >
+          
+
+    </div>
+</body>
+</html>
